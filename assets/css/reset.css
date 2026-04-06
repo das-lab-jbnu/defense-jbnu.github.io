@@ -1,0 +1,30 @@
+/* assets/css/reset.css */
+/* 웹사이트의 가장 밑바닥 설정입니다. 폰트와 공통 규격을 정의합니다. */
+
+
+/* 기본 초기화 */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    color: #333;
+    letter-spacing: -0.02em;
+}
+
+a { 
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.container { 
+    max-width: 1600px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}

@@ -1,0 +1,383 @@
+/* assets/css/home.css */
+/* 메인 페이지(index.html)에서만 쓰이는 화려한 배너와 카드 섹션 디자인입니다. */
+
+/* --- 메인 비주얼 (Hero) --- */
+.hero-banner { 
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.hero-content {
+    /* background: rgba(0, 0, 0, 0.5); */
+    padding: 40px;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+}
+
+.hero-content h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.hero-content p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* --- 교육과정 섹션 --- */
+/* --- 교육과정 섹션 --- */
+/* --- 교육과정 섹션 --- */
+.edu-overview { 
+    display: flex; 
+    padding: 100px 100px;
+    gap: 10px; 
+    align-items: flex-start; 
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.edu-title-area { 
+    height: 400px;
+    flex: 3; 
+    border-radius: 15px; 
+    background: #e0e0e0;
+}
+
+.edu-title-area h1 { 
+    font-size: 2.2rem; 
+    color: #000000; 
+    line-height: 1.3; 
+    margin: 25px; 
+}
+
+.edu-title-area h4 {
+    font-size: 1.6rem; 
+    color: #000000; 
+    line-height: 1.3; 
+    margin: 25px;     
+}
+
+.edu-title-area p {
+    font-size: 1.2rem; 
+    color: #000000; 
+    line-height: 1.3; 
+    margin: 25px;     
+}
+
+.sub-title { 
+    color: #888; 
+    font-size: 1.5rem; 
+    margin-bottom: 15px; 
+}
+
+.btn-more { 
+    display: inline-block; 
+    margin: 15px; 
+    padding: 12px 35px; 
+    border: 1px solid #003366; 
+    color: #003366; 
+    font-weight: bold; 
+    transition: 0.3s;
+}
+
+.btn-more:hover { 
+    background: #636e79; 
+    color: #fff; 
+}
+
+.edu-card-area { 
+    flex: 5.5;
+}
+
+.card-list { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px; 
+}
+
+.card-item { 
+    height: 400px; 
+    border-radius: 15px; 
+    overflow: hidden; 
+    background-size: cover; 
+    background-position: center;
+    position: relative; 
+    transition: transform 0.3s;
+}
+
+.card-item:hover { 
+    transform: translateY(-10px); 
+}
+
+.card-overlay {
+    position: absolute; 
+    bottom: 0; 
+    width: 100%; 
+    height: 100%;
+    /* background: linear-gradient(to top, rgba(197, 197, 197, 0.9) 20%, transparent 90%); */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-end; 
+    padding: 25px; 
+    color: #fff;
+}
+
+.card-overlay .category { 
+    font-size: 1.2rem; 
+    color: #ffcc00; 
+    margin-bottom: 8px; 
+}
+
+.card-overlay h5 { 
+    font-size: 2.0rem; 
+    margin-bottom: 10px; 
+    line-height: 1.3; 
+}
+
+.card-overlay h5 small { 
+    font-size: 1.3rem; 
+    display: block; 
+    opacity: 0.8; 
+    margin-top: 4px; 
+}
+
+.card-overlay p { 
+    font-size: 0.9rem; 
+    opacity: 0.8; 
+    display: none; 
+}
+
+.card-item:hover .card-overlay p { 
+    display: block; 
+}
+
+
+/* --- 소식 섹션 레이아웃 --- */
+/* --- 소식 섹션 레이아웃 --- */
+/* --- 소식 섹션 레이아웃 --- */
+.news-section { 
+    padding: 10px 100px; 
+    max-width: 1800px; 
+    margin: 0 auto; 
+}
+.news-inner { display: flex; gap: 30px; align-items: flex-start; }
+
+/* 왼쪽 영역 */
+.news-info { flex: 1; position: sticky; top: 150px; }
+.news-main-title { font-size: 3rem; font-weight: 800; margin-bottom: 15px; color: #222; }
+.view-more-top { 
+    display: flex; align-items: center; gap: 10px; 
+    font-weight: 700; font-size: 1.1rem; color: #333; margin-bottom: 50px;
+}
+.arrow-circle { 
+    display: inline-flex; width: 28px; height: 28px; background: #b08d57; /* 금색 계열 포인트 */
+    color: #fff; border-radius: 50%; justify-content: center; align-items: center; font-size: 0.9rem;
+}
+
+/* 카테고리 탭 버튼 */
+.news-tab-menu { list-style: none; }
+.tab-btn { 
+    width: 220px; padding: 18px 30px; margin-bottom: 12px;
+    background: #f2f2f2; border-radius: 40px; 
+    font-size: 1.2rem; font-weight: 600; color: #888;
+    cursor: pointer; transition: 0.3s; text-align: center;
+}
+.tab-btn.active { background: #222; color: #fff; }
+
+/* 기본적으로 탭 내용은 숨김 */
+.tab-con { display: none; }
+
+/* 기본적으로 모든 탭 컨텐츠를 숨깁니다 */
+.tab-con {
+    display: none;
+}
+
+/* 'active' 클래스가 붙은 요소만 보여줍니다 */
+.tab-con.active {
+    display: block;
+    animation: fadeIn 0.4s ease-out; /* 부드럽게 나타나는 효과 */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 오른쪽 리스트 영역 */
+.news-list-container { flex: 3.5; border-top: 2px solid #222; }
+.news-item { border-bottom: 1px solid #ddd; transition: 0.3s; }
+.news-item a { display: flex; align-items: center; padding: 20px 20px; gap: 10px; }
+.news-item:hover { background: #fcfcfc; }
+
+/* 날짜 박스 */
+.item-date { min-width: 80px; text-align: left; }
+.item-date .day { display: block; font-size: 2.2rem; font-weight: 800; line-height: 1; color: #222; }
+.item-date .year-month { font-size: 0.95rem; color: #666; font-weight: 500; }
+
+/* 제목 */
+.item-subject { flex: 1; font-size: 1.4rem; font-weight: 600; color: #333; line-height: 1.4; }
+
+/* VIEW 화살표 */
+.item-view { font-size: 0.9rem; font-weight: 700; color: #ccc; letter-spacing: 1px; transition: 0.3s; }
+.long-arrow { font-weight: 300; margin-left: 5px; }
+.news-item:hover .item-view { color: #222; transform: translateX(10px); }
+
+
+
+/* --- 프로그램/링크 섹션 (어두운 배경) --- */
+.program-section { 
+    background: #111b2d; /* 짙은 네이비 톤으로 신뢰감 형성 */
+    padding: 100px 0; 
+    color: #fff;
+}
+
+.program-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-end; 
+    margin-bottom: 60px; 
+}
+
+.program-main-title { 
+    font-size: 2.2rem; 
+    line-height: 1.4; 
+    font-weight: 700; 
+}
+.program-main-title span { color: #ffcc00; /* 포인트 컬러로 강조 */ }
+
+.btn-view-more { 
+    border-bottom: 1px solid #fff; 
+    padding-bottom: 5px; 
+    font-weight: 600; 
+    transition: 0.3s; 
+}
+.btn-view-more:hover { color: #ffcc00; border-color: #ffcc00; }
+
+/* 카드 그리드 */
+.program-grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 25px; 
+}
+
+.program-card { overflow: hidden; }
+
+.program-card .card-img { 
+    width: 100%; 
+    height: 350px; 
+    overflow: hidden; 
+    margin-bottom: 20px; 
+}
+
+.program-card .card-img img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    transition: 0.5s; 
+    filter: brightness(0.8); /* 기본적으로 살짝 어둡게 */
+}
+
+.program-card:hover .card-img img { 
+    transform: scale(1.1); 
+    filter: brightness(1.1); /* 호버 시 밝아지며 확대 */
+}
+
+.program-card .card-txt h5 { 
+    font-size: 1.5rem; 
+    font-weight: 700; 
+    margin-bottom: 10px; 
+}
+
+.program-card .card-txt p { 
+    font-size: 1rem; 
+    color: #aaa; 
+    line-height: 1.5; 
+}
+
+
+
+
+/* --- 방위산업융합과정 소개 배너 --- */
+.intro-banner-section {
+    width: 100%;
+    height: 450px;
+    background-image: url('../img/main/space_satellite.jpg'); /* 교수님의 위성 보안 연구 분야 반영 */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* 스크롤 시 배경이 고정되는 고급 효과 */
+    position: relative;
+}
+
+.intro-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 5, 20, 0.4); /* 어두운 네이비 톤 오버레이 */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* 왼쪽 정렬 */
+}
+
+.intro-content {
+    padding-left: 100px; /* 좌측 여백 일치 */
+    color: #fff;
+}
+
+.intro-sub {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.intro-main {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+}
+
+/* 흰색 둥근 버튼 */
+.btn-intro-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background: #fff;
+    color: #333;
+    padding: 12px 35px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.btn-intro-more:hover {
+    background: #003366;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.arrow-circle-white {
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.btn-intro-more:hover .arrow-circle-white {
+    border-color: #fff;
+}
