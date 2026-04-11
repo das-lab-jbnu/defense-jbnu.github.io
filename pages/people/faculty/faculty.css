@@ -1,0 +1,242 @@
+/* pages/people/faculty.css */
+/* faculty.html 전용 스타일 */
+
+
+/* --- 페이지 상단 타이틀 영역 --- */
+.page-hero {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1600 / 732;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+/* 배경 이미지를 시계방향 90° 회전 */
+.page-hero::before {
+    content: "";
+    position: absolute;
+    /* 원본 세로 이미지(732×1600)를 90° 회전 후 컨테이너(1600×732)를 꽉 채우기 위한 크기 */
+    width: calc(100% * 732 / 1600);
+    height: calc(100% * 1600 / 732);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    background-image: url('../people_image/Eyes to the Skies.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+/* 어두운 오버레이 */
+.page-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 20, 60, 0.6);
+    z-index: 1;
+}
+
+.page-hero h2 {
+    position: relative;
+    z-index: 2;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+}
+
+.page-hero p {
+    position: relative;
+    z-index: 2;
+    font-size: 1.15rem;
+    opacity: 0.75;
+    font-weight: 400;
+}
+
+/* --- 교원 섹션 공통 --- */
+.faculty-section {
+    padding: 80px 0 60px;
+    background: #fff;
+}
+
+.faculty-section + .faculty-section {
+    background: #f8f9fb;
+}
+
+.faculty-section + .faculty-section + .faculty-section {
+    background: #fff;
+}
+
+.section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 48px;
+    padding-bottom: 18px;
+    border-bottom: 2px solid #003366;
+}
+
+.section-heading .tag {
+    display: inline-block;
+    background: #003366;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+.section-heading h3 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: #003366;
+}
+
+.section-heading .count {
+    margin-left: auto;
+    font-size: 1rem;
+    color: #999;
+    font-weight: 500;
+}
+
+/* --- 교원 카드 그리드 --- */
+.faculty-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+
+
+/* --- 카드 --- */
+.faculty-card {
+    display: block;
+    background: #fff;
+    border: 1px solid #e8ecf0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.faculty-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0, 51, 102, 0.12);
+}
+
+.faculty-card .card-photo {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background: #dce3ec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.faculty-card .card-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.faculty-card .card-photo .photo-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #9aa5b4;
+}
+
+.faculty-card .card-photo .photo-placeholder svg {
+    width: 56px;
+    height: 56px;
+    opacity: 0.5;
+}
+
+.faculty-card .card-photo .photo-placeholder span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.faculty-card .card-body {
+    padding: 20px 18px 22px;
+}
+
+.faculty-card .card-body .position {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #5a7fa8;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 6px;
+}
+
+.faculty-card .card-body .name {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 8px;
+}
+
+.faculty-card .card-body .name-en {
+    font-size: 0.85rem;
+    color: #aaa;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.faculty-card .card-body .research {
+    font-size: 0.88rem;
+    color: #555;
+    line-height: 1.6;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 12px;
+}
+
+.faculty-card .card-body .research strong {
+    display: block;
+    font-size: 0.78rem;
+    color: #999;
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --- 반응형 --- */
+@media (max-width: 1024px) {
+    .faculty-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero { aspect-ratio: auto; padding: 80px 20px; }
+    .page-hero h2 { font-size: 2rem; }
+    .section-inner { padding: 0 20px; }
+
+    .faculty-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .faculty-grid {
+        grid-template-columns: 1fr;
+    }
+}
