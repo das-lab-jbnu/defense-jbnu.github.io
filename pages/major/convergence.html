@@ -4,12 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>첨단방위산업학과 | 전북대학교 K-방위산업연구소</title>
-
+ 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
+ 
+    <style>
+        .page-tab-nav {
+            border-bottom: 1px solid #ddd;
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .tab-list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .tab-item a {
+            display: block;
+            padding: 18px 32px;
+            font-size: 0.95rem;
+            color: #888;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+        .tab-item a:hover { color: #003366; }
+        .tab-item.active a {
+            color: #1a1a2e;
+            font-weight: 700;
+            border-bottom: 2px solid #1a1a2e;
+        }
+        .tab-section { display: none; }
+        .tab-section.active { display: block; }
+    </style>
 </head>
 <body>
-
+ 
 <header class="site-header">
     <div class="container">
         <h1 class="site-logo">
@@ -27,7 +60,7 @@
                         <li><a href="../major/graduate.html">첨단방산AI융합대학원</a></li>
                     </ul>
                 </li>
-
+ 
                 <li class="has-sub">
                     <a href="../people/faculty.html">교직원</a>
                     <ul class="sub-menu">
@@ -35,7 +68,7 @@
                         <li><a href="../people/staff.html">직원</a></li>
                     </ul>
                 </li>
-
+ 
                 <li class="has-sub">
                     <a href="../program/intro.html">학생 참여 프로그램</a>
                     <ul class="sub-menu">
@@ -43,7 +76,7 @@
                         <li><a href="../program/apply.html">프로그램 신청</a></li>
                     </ul>
                 </li>
-
+ 
                 <li class="has-sub">
                     <a href="../about/intro.html">연구소소개</a>
                     <ul class="sub-menu">
@@ -52,7 +85,7 @@
                         <li><a href="../about/location.html">찾아오시는 길</a></li>
                     </ul>
                 </li>
-
+ 
                 <li class="has-sub">
                     <a href="../research/cluster.html">연구 및 프로젝트</a>
                     <ul class="sub-menu">
@@ -60,7 +93,7 @@
                         <li><a href="../research/joint.html">산학연 공동연구</a></li>
                     </ul>
                 </li>
-
+ 
                 <li class="has-sub">
                     <a href="../community/notice.html">커뮤니티</a>
                     <ul class="sub-menu">
@@ -73,19 +106,272 @@
         </nav>
     </div>
 </header>
-
+ 
 <main>
-    <section class="preparing-section" style="padding: 150px 0; text-align: center; background: #f9f9f9;">
+ 
+    <nav class="page-tab-nav">
         <div class="container">
-            <div style="font-size: 4rem; margin-bottom: 20px;">⚠️</div>
-            <h2 style="font-size: 2.5rem; font-weight: 800; color: #003366; margin-bottom: 20px;">현재 페이지 준비중입니다.</h2>
-            <p style="font-size: 1.2rem; color: #666; line-height: 1.6; margin-bottom: 40px;">
-                전북대학교 K-방위산업연구소 홈페이지를 방문해 주셔서 감사합니다.<br>
-                보다 상세한 정보를 제공하기 위해 현재 콘텐츠를 제작 중입니다.
+            <ul class="tab-list">
+                <li class="tab-item active"><a href="#intro" data-tab="intro">소개</a></li>
+                <li class="tab-item"><a href="#purpose" data-tab="purpose">교육목표</a></li>
+                <li class="tab-item"><a href="#fields" data-tab="fields">커리큘럼 및 졸업요건</a></li>
+                <li class="tab-item"><a href="#cert" data-tab="cert">진로 및 취업 지원</a></li>
+            </ul>
+        </div>
+    </nav>
+ 
+    <section style="width: 100%; max-height: 400px; overflow: hidden;">
+        <img src="../../assets/img/main/major_convergence.jpg" alt="방위산업융합전공" style="width: 100%; height: 400px; object-fit: cover;">
+    </section>
+
+    <section id="intro" class="tab-section active" style="padding: 80px 0; background: #fff;">
+        <div class="container">
+            <h2 style="font-size: 1.8rem; font-weight: 800; color: #003366; margin-bottom: 24px;">방위산업융합과정 소개</h2>
+            <p style="font-size: 1rem; color: #444; line-height: 1.9; margin-bottom: 16px;">
+                전북대학교 방위산업융합과정은 21세기 글로벌 방위산업 생태계 변화에 맞춰 첨단국방기술 및 무기체계 개발, 방위산업 정책 및 경영전략, 무기수출 등 다양한 분야를 융합적으로 학습할 수 있도록 설계된 학제 간 융합 교육 프로그램입니다.
+                본 과정은 방위산업의 글로벌 경쟁력과 창의력을 갖춘 미래 융합인재를 양성하기 위해 첨단국방기술과 방위산업 경제·경영·산업정책을 아우르는 체계적인 커리큘럼을 제공합니다.
             </p>
-            <a href="../../index.html" style="padding: 15px 40px; background: #003366; color: #fff; font-weight: bold; border-radius: 5px; text-decoration: none;">메인 페이지로 돌아가기</a>
+            <p style="font-size: 1rem; color: #444; line-height: 1.9; margin-bottom: 60px;">
+                본 과정은 방위산업의 글로벌 경쟁력과 창의역량을 갖춘 미래를 이끌어갈 국방방산 전문인재 양성을 위해 첨단국방기술의 경제·경영·사회·인문 분야와의 학제간 융합교육을 목표로 합니다.
+            </p>
+
+            <hr style="border: none; border-top: 1px solid #dde3ed; margin-bottom: 48px;">
+            <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 420px)); gap: 24px; justify-content: center;">
+
+                <div style="background: #f5f5f5; border-radius: 12px; overflow: hidden;">
+                    <div style="width: 100%; height: 260px; background: #e8e8e8; display: flex; align-items: center; justify-content: center;">
+                        <img src="../../assets/img/main/major_convergence05.jpg" alt="융합형 교육과정" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 24px;">
+                        <div style="font-size: 1rem; font-weight: 700; color: #003366; margin-bottom: 8px;">융합형 교육과정</div>
+                        <p style="font-size: 0.92rem; color: #555; line-height: 1.7;">공학, 경제·경영, 정책학 아우르는 방위산업 특화 커리큘럼</p>
+                    </div>
+                </div>
+
+                <div style="background: #f5f5f5; border-radius: 12px; overflow: hidden;">
+                    <div style="width: 100%; height: 260px; background: #e8e8e8; display: flex; align-items: center; justify-content: center;">
+                        <img src="../../assets/img/main/major_convergence06.jpg" alt="전문가 네트워크 구축" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 24px;">
+                        <div style="font-size: 1rem; font-weight: 700; color: #003366; margin-bottom: 8px;">전문가 네트워크 구축</div>
+                        <p style="font-size: 0.92rem; color: #555; line-height: 1.7;">국내외 방산 전문가 초청 특강 및 글로벌 협력프로그램 운영</p>
+                    </div>
+                </div>
+
+                <div style="background: #f5f5f5; border-radius: 12px; overflow: hidden;">
+                    <div style="width: 100%; height: 260px; background: #e8e8e8; display: flex; align-items: center; justify-content: center;">
+                        <img src="../../assets/img/main/major_convergence07.jpg" alt="산학협력 기업 실무 교육" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 24px;">
+                        <div style="font-size: 1rem; font-weight: 700; color: #003366; margin-bottom: 8px;">산학협력 기업 실무 교육</div>
+                        <p style="font-size: 0.92rem; color: #555; line-height: 1.7;">방위사업청, 방산기업 및 국책연구기관(ADD 등)과 연계한 국방사업관리사 자격증 취득 지원, 프로젝트 및 실무 연계 교육</p>
+                    </div>
+                </div>
+
+                <div style="background: #f5f5f5; border-radius: 12px; overflow: hidden;">
+                    <div style="width: 100%; height: 260px; background: #e8e8e8; display: flex; align-items: center; justify-content: center;">
+                        <img src="../../assets/img/main/major_convergence08.jpg" alt="맞춤형 취업 지원" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 24px;">
+                        <div style="font-size: 1rem; font-weight: 700; color: #003366; margin-bottom: 8px;">맞춤형 취업 지원</div>
+                        <p style="font-size: 0.92rem; color: #555; line-height: 1.7;">국내외 방산기업 및 기관 취업을 위한 컨설팅 제공</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
+
+    <section id="purpose" class="tab-section" style="padding: 80px 0; background: #f9f9f9;">
+        <div class="container">
+            <h2 style="font-size: 1.8rem; font-weight: 800; color: #003366; margin-bottom: 32px;">교육목표</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+
+                <!-- 1행: 흰색 / 파란색 -->
+                <div style="background: #fff; border-radius: 10px; padding: 24px; font-size: 0.95rem; color: #333; line-height: 1.6;">
+                    국방첨단기술 및 정책 이해
+                </div>
+                <div style="background: #e8f0fb; border-radius: 10px; padding: 24px; font-size: 0.95rem; color: #333; line-height: 1.6;">
+                    방위산업 핵심기술 및 연구개발(R&D) 프로세스 학습
+                </div>
+
+                <!-- 2행: 파란색 / 흰색 -->
+                <div style="background: #e8f0fb; border-radius: 10px; padding: 24px; font-size: 0.95rem; color: #333; line-height: 1.6;">
+                    글로벌 방위산업 정책 및 시장 동향 분석
+                </div>
+                <div style="background: #fff; border-radius: 10px; padding: 24px; font-size: 0.95rem; color: #333; line-height: 1.6;">
+                    방산기업 경영 전략 및 무기체계 수출 전략 이해
+                </div>
+
+                <!-- 3행: 흰색 / 파란색 -->
+                <div style="background: #fff; border-radius: 10px; padding: 24px; font-size: 0.95rem; color: #333; line-height: 1.6;">
+                    무기 획득 및 조달 체계 학습
+                </div>
+                <div style="background: #e8f0fb; border-radius: 10px; padding: 24px; font-size: 0.95rem; color: #333; line-height: 1.6;">
+                    방산기업 현장 적용 능력 배양
+                </div>
+
+                <!-- 4행: 파란색 / 흰색 -->
+                <div style="background: #e8f0fb; border-radius: 10px; padding: 24px; font-size: 0.95rem; color: #333; line-height: 1.6;">
+                    방산 프로젝트 수행을 통한 실무 경험 축적
+                </div>
+                <div style="background: #fff; border-radius: 10px; padding: 24px; font-size: 0.95rem; color: #333; line-height: 1.6;">
+                    글로벌 방산시장 진출을 위한 어학능력 배양 등
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="cert" class="tab-section" style="padding: 80px 0; background: #fff;">
+        <div class="container">
+            <h2 style="font-size: 1.8rem; font-weight: 800; color: #003366; margin-bottom: 24px;">진로 및 취업 지원</h2>
+            <p style="font-size: 1rem; color: #444; line-height: 1.9; margin-bottom: 48px;">
+                본 과정을 이수한 학생들은 국내외 방산기업, 연구기관, 국방 공공기관 등에서 활약할 수 있도록 <strong>다양한 진로 지원 프로그램을 제공합니다.</strong>
+            </p>
+
+            <!-- 방산기업 취업 연계 -->
+            <div style="margin-bottom: 32px;">
+                <div style="background: #e8f0fb; border-radius: 8px; padding: 14px 20px; font-size: 0.95rem; font-weight: 700; color: #222; margin-bottom: 16px; display: inline-block;">
+                    - 방산기업 취업 연계 <span style="font-weight: 400;">(한화에어로스페이스, KAI, LIG넥스원, 현대로템 등)</span>
+                </div>
+                <div style="padding-left: 8px;">
+                    <img src="../../assets/img/main/major_convergence02.png" alt="방산기업 취업 연계" style="width: 100%; max-width: 600px; height: auto; object-fit: contain;">
+                </div>
+            </div>
+
+            <!-- 국방 연구기관 및 공공기관 취업 지원 -->
+            <div style="margin-bottom: 32px;">
+                <div style="background: #e8f0fb; border-radius: 8px; padding: 14px 20px; font-size: 0.95rem; font-weight: 700; color: #222; margin-bottom: 16px; display: inline-block;">
+                    - 국방 연구기관 및 공공기관 취업 지원 <span style="font-weight: 400;">(ADD, KIDA, 국방기술품질원 등)</span>
+                </div>
+                <div style="padding-left: 8px;">
+                    <img src="../../assets/img/main/major_convergence03.png" alt="국방 연구기관 취업 지원" style="width: 100%; max-width: 600px; height: auto; object-fit: contain;">
+                </div>
+            </div>
+
+            <!-- 글로벌 방산기업 진출 기회 제공 -->
+            <div style="margin-bottom: 32px;">
+                <div style="background: #e8f0fb; border-radius: 8px; padding: 14px 20px; font-size: 0.95rem; font-weight: 700; color: #222; margin-bottom: 16px; display: inline-block;">
+                    - 글로벌 방산기업 진출 기회 제공 <span style="font-weight: 400;">(록히드 마틴, 보잉, 탈레스 등)</span>
+                </div>
+                <div style="padding-left: 8px;">
+                    <img src="../../assets/img/main/major_convergence04.png" alt="글로벌 방산기업" style="width: 100%; max-width: 600px; height: auto; object-fit: contain;">
+                </div>
+            </div>
+
+            <!-- 산학협력 프로젝트 참여 -->
+            <div style="margin-bottom: 32px;">
+                <div style="background: #e8f0fb; border-radius: 8px; padding: 14px 20px; font-size: 0.95rem; font-weight: 700; color: #222; display: inline-block;">
+                    - 산학협력 프로젝트 참여
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fields" class="tab-section" style="padding: 80px 0; background: #fff;">
+        <div class="container">
+
+            <h2 style="font-size: 1.8rem; font-weight: 800; color: #003366; margin-bottom: 32px;">졸업 요건</h2>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 12px; font-size: 0.95rem;">
+                <thead>
+                    <tr style="background: #003366; color: #fff; text-align: center;">
+                        <th style="padding: 14px;">구분</th>
+                        <th style="padding: 14px;">학점</th>
+                        <th style="padding: 14px;">이수학점</th>
+                        <th style="padding: 14px;">인정교과목</th>
+                        <th style="padding: 14px;">계</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="text-align: center; background: #f4f7fb;">
+                        <td style="padding: 14px;">학점</td>
+                        <td style="padding: 14px;">2,3,4 학년</td>
+                        <td style="padding: 14px;">24</td>
+                        <td style="padding: 14px;">12(4과목)</td>
+                        <td style="padding: 14px;">36</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 0.88rem; color: #666; margin-bottom: 60px;">※ 매 학기 6학점 (최대 18학점)
+                ※ 원 전공 학사학위 + 방위산업융합학사 동시 수여 </p>
+
+            <h2 style="font-size: 1.8rem; font-weight: 800; color: #003366; margin-bottom: 32px;">주요 커리큘럼(안)</h2>
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.92rem;">
+                <thead>
+                    <tr style="background: #003366; color: #fff; text-align: center;">
+                        <th style="padding: 12px;">학년</th>
+                        <th style="padding: 12px;">학기</th>
+                        <th style="padding: 12px; text-align: left;">교과목</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 2학년 -->
+                    <tr>
+                        <td style="padding: 12px; text-align: center; vertical-align: top;" rowspan="2">2</td>
+                        <td style="padding: 12px; text-align: center; vertical-align: top;">1</td>
+                        <td style="padding: 12px;">
+                            방위산업론 (Understanding defense Industry Studies)<br>
+                            방산열공학 (Defense Thermal Engineering)<br>
+                            군사회로이론 (Military Electronic Circuit)<br>
+                            군수재료화학 (Military Materials Science)<br>
+                            국방획득체계 (Defense Acquisition System)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; text-align: center; vertical-align: top;">2</td>
+                        <td style="padding: 12px;">
+                            군사전략론 (Military Strategy)<br>
+                            방산계측공학 (Measurement Engineering for Defense Industry)<br>
+                            레이저광학 및 실험 (Laser Optics and Experiments)
+                        </td>
+                    </tr>
+                    <!-- 3학년 -->
+                    <tr style="background: #f4f7fb;">
+                        <td style="padding: 12px; text-align: center; vertical-align: top;" rowspan="2">3</td>
+                        <td style="padding: 12px; text-align: center; vertical-align: top;">1</td>
+                        <td style="padding: 12px;">
+                            방산경영관리 (Business management for defense Industry)<br>
+                            무기체계론1 (Weapon Systems I)<br>
+                            방산양자빔광학 (Quantum Beam Optics for Defense Industry)<br>
+                            AI머신러닝 (AI Machine Learning)
+                        </td>
+                    </tr>
+                    <tr style="background: #f4f7fb;">
+                        <td style="padding: 12px; text-align: center; vertical-align: top;">2</td>
+                        <td style="padding: 12px;">
+                            무기체계론2 (Weapon Systems II)<br>
+                            방산특수소재 (High-Temperature Materials for Defense Industry)<br>
+                            금속강도학 (Mechanical Metallurgy)<br>
+                            방산탄소섬유 (Carbon Fibers for Defense Industry)
+                        </td>
+                    </tr>
+                    <!-- 4학년 -->
+                    <tr>
+                        <td style="padding: 12px; text-align: center; vertical-align: top;" rowspan="2">4</td>
+                        <td style="padding: 12px; text-align: center; vertical-align: top;">1</td>
+                        <td style="padding: 12px;">
+                            방산지능제어공학 (Data-driven Intelligent Control for Defense Systems)<br>
+                            신뢰성공학 (Reliability Engineering)<br>
+                            방산메카트로닉스 (Mechtronics for Defense Industry)<br>
+                            방산창의공학설계 (Capstine Design for Defense Industry)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; text-align: center; vertical-align: top;">2</td>
+                        <td style="padding: 12px;">
+                            방산에너지소재 (Energy Storage for Defense Industry)<br>
+                            폭파공학 (Explosive Demolition Engineering)<br>
+                            방위산업 육성개론 (Introduction to Defense Industry Promotion)<br>
+                            방위산업세미나 (Seminar on Defense Industry)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+
 </main>
 
 <footer class="site-footer">
@@ -98,5 +384,23 @@
 </footer>
 
     <script src="../../assets/js/main.js"></script>
+    <script>
+        document.querySelectorAll('.tab-item a[data-tab]').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                var targetId = this.getAttribute('data-tab');
+
+                document.querySelectorAll('.tab-section').forEach(function(sec) {
+                    sec.classList.remove('active');
+                });
+                document.querySelectorAll('.tab-item').forEach(function(item) {
+                    item.classList.remove('active');
+                });
+
+                document.getElementById(targetId).classList.add('active');
+                this.parentElement.classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
