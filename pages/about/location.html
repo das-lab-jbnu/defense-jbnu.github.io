@@ -75,15 +75,128 @@
 </header>
 
 <main>
-    <section class="preparing-section" style="padding: 150px 0; text-align: center; background: #f9f9f9;">
-        <div class="container">
-            <div style="font-size: 4rem; margin-bottom: 20px;">⚠️</div>
-            <h2 style="font-size: 2.5rem; font-weight: 800; color: #003366; margin-bottom: 20px;">현재 페이지 준비중입니다.</h2>
-            <p style="font-size: 1.2rem; color: #666; line-height: 1.6; margin-bottom: 40px;">
-                전북대학교 K-방위산업연구소 홈페이지를 방문해 주셔서 감사합니다.<br>
-                보다 상세한 정보를 제공하기 위해 현재 콘텐츠를 제작 중입니다.
-            </p>
-            <a href="../../index.html" style="padding: 15px 40px; background: #003366; color: #fff; font-weight: bold; border-radius: 5px; text-decoration: none;">메인 페이지로 돌아가기</a>
+    <section style="padding: 80px 0; background: #f4f4f4;">
+        <div class="container" style="max-width: 1180px; margin: 0 auto;">
+
+            <h2 style="font-size: 2.4rem; font-weight: 800; color: #003366; margin-bottom: 28px;">
+                찾아오시는 길
+            </h2>
+
+            <!-- 상단 정보 카드 -->
+            <div style="display: grid; grid-template-columns: 2.2fr 1fr 1fr; gap: 18px; margin-bottom: 28px;">
+                <div style="background: #eef1f4; border-radius: 14px; padding: 28px 30px;">
+                    <div style="font-size: 1.1rem; font-weight: 700; color: #222; margin-bottom: 10px;">주소</div>
+                    <div style="font-size: 1.05rem; color: #333; line-height: 1.8;">
+                        전북 전주시 덕진구 백제대로 567 전북대학교 전주캠퍼스 창조2관 4층
+                        <a href="https://map.kakao.com/link/search/전북대학교 전주캠퍼스 창조2관" target="_blank"
+                           style="display: inline-block; margin-left: 10px; padding: 4px 10px; font-size: 0.9rem; font-weight: 700; color: #fff; background: #0b67c2; border-radius: 999px; text-decoration: none;">
+                            카카오맵 보기
+                        </a>
+                    </div>
+                </div>
+
+                <div style="background: #eef1f4; border-radius: 14px; padding: 28px 30px;">
+                    <div style="font-size: 1.1rem; font-weight: 700; color: #222; margin-bottom: 10px;">전화</div>
+                    <div style="font-size: 1.6rem; font-weight: 700; color: #333;">063-270-4582</div>
+                </div>
+
+                <div style="background: #eef1f4; border-radius: 14px; padding: 28px 30px;">
+                    <div style="font-size: 1.1rem; font-weight: 700; color: #222; margin-bottom: 10px;">팩스</div>
+                    <div style="font-size: 1.6rem; font-weight: 700; color: #333;">063-000-0000</div>
+                </div>
+            </div>
+
+            <!-- 실제 지도 -->
+            <div style="background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.08); margin-bottom: 40px;">
+                <div id="map" style="width: 100%; height: 520px;"></div>
+            </div>
+
+            <!-- 개인차량이용 -->
+            <h3 style="font-size: 1.9rem; font-weight: 800; color: #003366; margin: 0 0 18px;">
+                개인차량이용
+            </h3>
+            <div style="background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.06); margin-bottom: 40px;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 1rem; color: #333;">
+                    <thead>
+                        <tr style="background: #f3f5f8;">
+                            <th style="padding: 16px 12px; border-bottom: 1px solid #ddd;">지역</th>
+                            <th style="padding: 16px 12px; border-bottom: 1px solid #ddd;">거리</th>
+                            <th style="padding: 16px 12px; border-bottom: 1px solid #ddd;">내용</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 16px 12px; border-bottom: 1px solid #eee; text-align: center;">호남고속도로</td>
+                            <td style="padding: 16px 12px; border-bottom: 1px solid #eee; text-align: center;">8.2km(전주 IC부터)</td>
+                            <td style="padding: 16px 12px; border-bottom: 1px solid #eee;">전주 톨게이트 → 호남제일문 → 팔달로 → 공설운동장 네거리 → 전북은행 본점 → 전북대학교</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px 12px; border-bottom: 1px solid #eee; text-align: center;">대전-통영고속도로</td>
+                            <td style="padding: 16px 12px; border-bottom: 1px solid #eee; text-align: center;">50km(장수 IC부터)</td>
+                            <td style="padding: 16px 12px; border-bottom: 1px solid #eee;">장수 톨게이트 → 장계에서 진안/전주 방향 → 26번 국도 → 전주역 → 명주골 네거리 → 전북대학교</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px 12px; border-bottom: 1px solid #eee; text-align: center;">익산-포항고속도로</td>
+                            <td style="padding: 16px 12px; border-bottom: 1px solid #eee; text-align: center;">10km(완주 IC부터)</td>
+                            <td style="padding: 16px 12px; border-bottom: 1px solid #eee;">완주 톨게이트 → 17번 국도 → 자동차등록사업소앞 → 호성동 네거리 → 명주골 네거리 → 전북대학교</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px 12px; text-align: center;">서해안 고속도로</td>
+                            <td style="padding: 16px 12px; text-align: center;">31.2km(동군산 IC부터)</td>
+                            <td style="padding: 16px 12px;">동군산 톨게이트 → 전주군산간 산업도로 → 호남제일문 → 팔달로 → 공설운동장 네거리 → 전북은행 본점 → 전북대학교</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 시내버스이용 -->
+            <h3 style="font-size: 1.9rem; font-weight: 800; color: #003366; margin: 0 0 18px;">
+                시내버스이용
+            </h3>
+            <div style="background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.06);">
+                <table style="width: 100%; border-collapse: collapse; font-size: 1rem; color: #333;">
+                    <thead>
+                        <tr style="background: #f3f5f8;">
+                            <th style="padding: 16px 12px; border-bottom: 1px solid #ddd;">정류장명칭</th>
+                            <th style="padding: 16px 12px; border-bottom: 1px solid #ddd;">방면정보</th>
+                            <th style="padding: 16px 12px; border-bottom: 1px solid #ddd;">경유노선 / 도착정보</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 16px 12px; border-bottom: 1px solid #eee; text-align: center;">전북대학교 정문, 덕진소방서</td>
+                            <td style="padding: 16px 12px; border-bottom: 1px solid #eee; text-align: center;">덕진성당앞, 종합경기장, 국제교류어학원, 기린대로 백제교, 국민은행금암지점 방향</td>
+                            <td rowspan="6" style="padding: 16px 12px; text-align: center; vertical-align: middle;">
+                                <a href="https://map.kakao.com/link/search/전북대학교 정문" target="_blank"
+                                   style="display: inline-block; padding: 10px 18px; font-size: 0.95rem; font-weight: 700; color: #fff; background: #0b67c2; border-radius: 999px; text-decoration: none;">
+                                    경유지 및 버스조회
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px 12px; border-bottom: 1px solid #eee; text-align: center;">전북대학교 삼성문화회관</td>
+                            <td style="padding: 16px 12px; border-bottom: 1px solid #eee; text-align: center;">신정문 방향</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px 12px; border-bottom: 1px solid #eee; text-align: center;">전북대학교 국제교류어학원</td>
+                            <td style="padding: 16px 12px; border-bottom: 1px solid #eee; text-align: center;">종점 방향</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px 12px; border-bottom: 1px solid #eee; text-align: center;">전북대학교 건지광장</td>
+                            <td style="padding: 16px 12px; border-bottom: 1px solid #eee; text-align: center;">삼성문화회관 방향</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px 12px; border-bottom: 1px solid #eee; text-align: center;">전북대학교 전북대종점</td>
+                            <td style="padding: 16px 12px; border-bottom: 1px solid #eee; text-align: center;">종점</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px 12px; text-align: center;">전북대학교 덕진성당앞</td>
+                            <td style="padding: 16px 12px; text-align: center;">기린대로덕진공원 방향</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     </section>
 </main>
@@ -98,5 +211,6 @@
 </footer>
 
     <script src="../../assets/js/main.js"></script>
+    
 </body>
 </html>
