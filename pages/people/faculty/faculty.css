@@ -1,6 +1,7 @@
 /* pages/people/faculty.css */
 /* faculty.html 전용 스타일 */
 
+html, body, main { overflow-x: hidden; }
 
 /* --- 페이지 상단 타이틀 영역 --- */
 .page-hero {
@@ -10,30 +11,15 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #fff;
-}
-
-/* 배경 이미지 (원본 비율 그대로) */
-.page-hero .hero-bg {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-/* 어두운 오버레이 */
-.page-hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 20, 60, 0.6);
-    z-index: 1;
+    color: #003366;
+    overflow: hidden;
+    border-top: 2px solid #003366;
+    height: 200px;
+    background: #f4f7fb;
 }
 
 
-/* 텍스트 중앙 오버레이 */
 .page-hero .hero-text {
-    position: absolute;
-    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,8 +27,6 @@
 }
 
 .page-hero h2 {
-    position: relative;
-    z-index: 2;
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 12px;
@@ -50,8 +34,6 @@
 }
 
 .page-hero p {
-    position: relative;
-    z-index: 2;
     font-size: 1.15rem;
     opacity: 0.75;
     font-weight: 400;
@@ -113,7 +95,7 @@
 /* --- 교원 카드 그리드 --- */
 .faculty-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 28px;
 }
 
@@ -177,7 +159,7 @@
 }
 
 .faculty-card .card-body .position {
-    font-size: 0.78rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: #5a7fa8;
     text-transform: uppercase;
@@ -186,21 +168,21 @@
 }
 
 .faculty-card .card-body .name {
-    font-size: 1.25rem;
+    font-size: 1.45rem;
     font-weight: 800;
     color: #111;
     margin-bottom: 8px;
 }
 
 .faculty-card .card-body .name-en {
-    font-size: 0.85rem;
+    font-size: 1rem;
     color: #aaa;
     font-weight: 400;
     margin-bottom: 12px;
 }
 
 .faculty-card .card-body .research {
-    font-size: 0.88rem;
+    font-size: 1rem;
     color: #555;
     line-height: 1.6;
     border-top: 1px solid #f0f0f0;
@@ -209,7 +191,7 @@
 
 .faculty-card .card-body .research strong {
     display: block;
-    font-size: 0.78rem;
+    font-size: 0.9rem;
     color: #999;
     font-weight: 600;
     margin-bottom: 4px;

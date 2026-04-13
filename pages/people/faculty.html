@@ -7,7 +7,86 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="faculty/faculty.css">
+    <style>
+        .page-hero {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #003366;
+            overflow: hidden;
+            border-top: 2px solid #003366;
+            height: 200px;
+            background: #f4f7fb;
+        }
+        .page-hero .hero-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        .page-hero h2 { font-size: 3rem; font-weight: 800; margin-bottom: 12px; letter-spacing: -1px; }
+        .page-hero p  { font-size: 1.15rem; opacity: 0.75; font-weight: 400; }
+
+        .faculty-section { padding: 80px 0 60px; background: #fff; }
+        .faculty-section + .faculty-section { background: #f8f9fb; }
+        .faculty-section + .faculty-section + .faculty-section { background: #fff; }
+        .faculty-section .container { max-width: 1200px; }
+
+        .section-heading {
+            display: flex; align-items: center; gap: 14px;
+            margin-bottom: 48px; padding-bottom: 18px;
+            border-bottom: 2px solid #003366;
+        }
+        .section-heading h3 { font-size: 1.9rem; font-weight: 800; color: #003366; }
+        .section-heading .count { margin-left: auto; font-size: 1rem; color: #999; font-weight: 500; }
+
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 28px;
+        }
+
+        .faculty-card {
+            display: block; background: #fff; border: 1px solid #e8ecf0;
+            border-radius: 12px; overflow: hidden;
+            transition: transform 0.25s, box-shadow 0.25s;
+            text-decoration: none; color: inherit; cursor: pointer;
+        }
+        .faculty-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0,51,102,0.12); }
+
+        .faculty-card .card-photo {
+            width: 100%; aspect-ratio: 3/4; background: #dce3ec;
+            display: flex; align-items: center; justify-content: center; overflow: hidden;
+        }
+        .faculty-card .card-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+        .faculty-card .card-body { padding: 20px 18px 22px; }
+        .faculty-card .card-body .position {
+            font-size: 0.95rem; font-weight: 700; color: #5a7fa8;
+            text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px;
+        }
+        .faculty-card .card-body .name { font-size: 1.45rem; font-weight: 800; color: #111; margin-bottom: 8px; }
+        .faculty-card .card-body .name-en { font-size: 1rem; color: #aaa; font-weight: 400; margin-bottom: 12px; }
+        .faculty-card .card-body .research {
+            font-size: 1rem; color: #555; line-height: 1.6;
+            border-top: 1px solid #f0f0f0; padding-top: 12px;
+        }
+        .faculty-card .card-body .research strong {
+            display: block; font-size: 0.9rem; color: #999; font-weight: 600;
+            margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 1024px) { .faculty-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) {
+            .page-hero { padding: 80px 20px; }
+            .page-hero h2 { font-size: 2rem; }
+            .faculty-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        }
+        @media (max-width: 480px) { .faculty-grid { grid-template-columns: 1fr; } }
+    </style>
 </head>
 <body>
 
@@ -95,7 +174,6 @@
          페이지 상단 타이틀
     ============================== -->
     <section class="page-hero">
-        <img class="hero-bg" src="people_image/Eyes to the Skies.jpg" alt="">
         <div class="hero-text">
             <h2>교수</h2>
             <p>첨단방위산업학과 교원을 소개합니다.</p>
@@ -106,7 +184,7 @@
          전임교원 (7명)
     ============================== -->
     <section class="faculty-section">
-        <div class="section-inner">
+        <div class="container">
             <div class="section-heading">
                 <h3>전임교원</h3>
                 <span class="count">총 7명</span>
@@ -194,14 +272,14 @@
                 </a>
 
                 <!-- 전임 6 -->
-                <a class="faculty-card" href="faculty/faculty_professors/yoo-junsu.html">
+                <a class="faculty-card" href="faculty/faculty_professors/yoo-joonsoo.html">
                     <div class="card-photo">
                         <img src="people_image/유준수.jpg" alt="유준수">
                     </div>
                     <div class="card-body">
                         <div class="position">Assistant Professor</div>
                         <div class="name">유준수</div>
-                        <div class="name-en">Junsu Yoo</div>
+                        <div class="name-en">Joonsoo Yoo</div>
                         <div class="research">
                             <strong>Research</strong>
                             사이버보안, 양자내성암호, 인공지능보안
@@ -233,9 +311,9 @@
          특임교원 (2명)
     ============================== -->
     <section class="faculty-section">
-        <div class="section-inner">
+        <div class="container">
             <div class="section-heading">
-                
+
                 <h3>특임교원</h3>
                 <span class="count">총 2명</span>
             </div>
@@ -281,9 +359,9 @@
          객원교원 (3명)
     ============================== -->
     <section class="faculty-section">
-        <div class="section-inner">
+        <div class="container">
             <div class="section-heading">
-                
+
                 <h3>객원교원</h3>
                 <span class="count">총 3명</span>
             </div>
