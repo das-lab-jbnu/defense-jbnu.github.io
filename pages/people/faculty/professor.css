@@ -1,0 +1,296 @@
+/* pages/people/professor.css */
+/* 교수 상세 페이지 전용 스타일 */
+
+body { overflow-x: hidden; }
+
+/* --- 뒤로가기 바 --- */
+.prof-breadcrumb {
+    background: #f4f6f9;
+    padding: 14px 0;
+    border-bottom: 1px solid #e5e8ec;
+}
+
+.prof-breadcrumb .inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.prof-breadcrumb a {
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.prof-breadcrumb a:hover { color: #003366; }
+
+.prof-breadcrumb .sep { color: #ccc; }
+
+.prof-breadcrumb .current { color: #003366; font-weight: 600; }
+
+/* --- 프로필 히어로 --- */
+.prof-hero {
+    background: #fff;
+    padding: 70px 0 60px;
+    border-bottom: 1px solid #eaecef;
+}
+
+.prof-hero .inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+/* 사진 */
+.prof-photo {
+    flex-shrink: 0;
+    width: 220px;
+}
+
+.prof-photo .photo-wrap {
+    width: 220px;
+    height: 280px;
+    background: #dce3ec;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prof-photo .photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prof-photo .photo-wrap .placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #9aa5b4;
+}
+
+.prof-photo .photo-wrap .placeholder svg {
+    width: 64px;
+    height: 64px;
+    opacity: 0.45;
+}
+
+.prof-photo .photo-wrap .placeholder span {
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+/* 기본 정보 */
+.prof-info {
+    flex: 1;
+    padding-top: 10px;
+}
+
+.prof-info .position-badge {
+    display: inline-block;
+    background: #e8f0fb;
+    color: #2a5aa0;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    letter-spacing: 0.4px;
+}
+
+.prof-info .name-ko {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #111;
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -1px;
+}
+
+.prof-info .name-en {
+    font-size: 1.1rem;
+    color: #aaa;
+    font-weight: 400;
+    margin-bottom: 32px;
+}
+
+.prof-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 32px;
+}
+
+.prof-contact .contact-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.prof-contact .contact-row .label {
+    min-width: 52px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.prof-contact .contact-row a {
+    color: #2a5aa0;
+    text-decoration: none;
+}
+
+.prof-contact .contact-row a:hover { text-decoration: underline; }
+
+.prof-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.prof-keywords .kw {
+    background: #f4f6f9;
+    color: #333;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #e0e4ea;
+}
+
+/* --- 본문 콘텐츠 --- */
+.prof-body {
+    background: #f8f9fb;
+    padding: 60px 0 80px;
+}
+
+.prof-body .inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* 섹션 공통 */
+.prof-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 36px 32px;
+    margin-bottom: 24px;
+    border: 1px solid #eaecef;
+}
+
+.prof-section:last-child { margin-bottom: 0; }
+
+.prof-section h4 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #003366;
+    margin-bottom: 22px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #003366;
+}
+
+/* 연구 분야 */
+.research-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.research-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+.research-list li::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #003366;
+    flex-shrink: 0;
+    margin-top: 8px;
+}
+
+/* 학력 / 경력 */
+.timeline {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.timeline li {
+    display: flex;
+    gap: 16px;
+    font-size: 0.92rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+.timeline li .year {
+    min-width: 52px;
+    font-weight: 700;
+    color: #003366;
+    font-size: 0.85rem;
+}
+
+/* 강의 과목 */
+.course-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.course-list li {
+    font-size: 0.92rem;
+    color: #555;
+    padding: 8px 12px;
+    background: #f8f9fb;
+    border-radius: 6px;
+    border-left: 3px solid #003366;
+}
+
+/* --- 반응형 --- */
+@media (max-width: 900px) {
+    .prof-hero .inner {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .prof-photo { width: 100%; }
+    .prof-photo .photo-wrap { width: 160px; height: 200px; }
+    .prof-body .inner { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .prof-hero .inner, .prof-body .inner, .prof-breadcrumb .inner {
+        padding: 0 20px;
+    }
+    .prof-info .name-ko { font-size: 2rem; }
+}

@@ -7,6 +7,86 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <style>
+        .page-hero {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #003366;
+            overflow: hidden;
+            border-top: 2px solid #003366;
+            height: 200px;
+            background: #f4f7fb;
+        }
+        .page-hero .hero-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        .page-hero h2 { font-size: 3rem; font-weight: 800; margin-bottom: 12px; letter-spacing: -1px; }
+        .page-hero p  { font-size: 1.15rem; opacity: 0.75; font-weight: 400; }
+
+        .faculty-section { padding: 80px 0 60px; background: #fff; }
+        .faculty-section + .faculty-section { background: #f8f9fb; }
+        .faculty-section + .faculty-section + .faculty-section { background: #fff; }
+        .faculty-section .container { max-width: 1200px; }
+
+        .section-heading {
+            display: flex; align-items: center; gap: 14px;
+            margin-bottom: 48px; padding-bottom: 18px;
+            border-bottom: 2px solid #003366;
+        }
+        .section-heading h3 { font-size: 1.9rem; font-weight: 800; color: #003366; }
+        .section-heading .count { margin-left: auto; font-size: 1rem; color: #999; font-weight: 500; }
+
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 28px;
+        }
+
+        .faculty-card {
+            display: block; background: #fff; border: 1px solid #e8ecf0;
+            border-radius: 12px; overflow: hidden;
+            transition: transform 0.25s, box-shadow 0.25s;
+            text-decoration: none; color: inherit; cursor: pointer;
+        }
+        .faculty-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0,51,102,0.12); }
+
+        .faculty-card .card-photo {
+            width: 100%; aspect-ratio: 3/4; background: #dce3ec;
+            display: flex; align-items: center; justify-content: center; overflow: hidden;
+        }
+        .faculty-card .card-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+        .faculty-card .card-body { padding: 20px 18px 22px; }
+        .faculty-card .card-body .position {
+            font-size: 0.95rem; font-weight: 700; color: #5a7fa8;
+            text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px;
+        }
+        .faculty-card .card-body .name { font-size: 1.45rem; font-weight: 800; color: #111; margin-bottom: 8px; }
+        .faculty-card .card-body .name-en { font-size: 1rem; color: #aaa; font-weight: 400; margin-bottom: 12px; }
+        .faculty-card .card-body .research {
+            font-size: 1rem; color: #555; line-height: 1.6;
+            border-top: 1px solid #f0f0f0; padding-top: 12px;
+        }
+        .faculty-card .card-body .research strong {
+            display: block; font-size: 0.9rem; color: #999; font-weight: 600;
+            margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 1024px) { .faculty-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) {
+            .page-hero { padding: 80px 20px; }
+            .page-hero h2 { font-size: 2rem; }
+            .faculty-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        }
+        @media (max-width: 480px) { .faculty-grid { grid-template-columns: 1fr; } }
+    </style>
 </head>
 <body>
 
@@ -29,10 +109,10 @@
                 </li>
 
                 <li class="has-sub">
-                    <a href="../people/faculty.html">교직원</a>
+                    <a href="faculty.html">교직원</a>
                     <ul class="sub-menu">
-                        <li><a href="../people/faculty.html">교수</a></li>
-                        <li><a href="../people/staff.html">직원</a></li>
+                        <li><a href="faculty.html">교수</a></li>
+                        <li><a href="staff.html">직원</a></li>
                     </ul>
                 </li>
 
@@ -75,6 +155,8 @@
 </header>
 
 <main>
+
+    <!--
     <section class="preparing-section" style="padding: 150px 0; text-align: center; background: #f9f9f9;">
         <div class="container">
             <div style="font-size: 4rem; margin-bottom: 20px;">⚠️</div>
@@ -83,9 +165,261 @@
                 전북대학교 K-방위산업연구소 홈페이지를 방문해 주셔서 감사합니다.<br>
                 보다 상세한 정보를 제공하기 위해 현재 콘텐츠를 제작 중입니다.
             </p>
-            <a href="../../index.html" style="padding: 15px 40px; background: #003366; color: #fff; font-weight: bold; border-radius: 5px; text-decoration: none;">메인 페이지로 돌아가기</a>
+            <a href="../../../index.html" style="padding: 15px 40px; background: #003366; color: #fff; font-weight: bold; border-radius: 5px; text-decoration: none;">메인 페이지로 돌아가기</a>
         </div>
     </section>
+    -->
+
+    <!-- ==============================
+         페이지 상단 타이틀
+    ============================== -->
+    <section class="page-hero">
+        <div class="hero-text">
+            <h2>교수</h2>
+            <p>첨단방위산업학과 교원을 소개합니다.</p>
+        </div>
+    </section>
+
+    <!-- ==============================
+         전임교원 (7명)
+    ============================== -->
+    <section class="faculty-section">
+        <div class="container">
+            <div class="section-heading">
+                <h3>전임교원</h3>
+                <span class="count">총 7명</span>
+            </div>
+            <div class="faculty-grid col-4">
+
+                <!-- 전임 1 -->
+                <a class="faculty-card" href="faculty/faculty_professors/kang-eunho.html">
+                    <div class="card-photo">
+                        <img src="people_image/강은호.jpg" alt="강은호">
+                    </div>
+                    <div class="card-body">
+                        <div class="position">Professor</div>
+                        <div class="name">강은호</div>
+                        <div class="name-en">Eunho Kang</div>
+                        <div class="research">
+                            <strong>Research</strong>
+                            방산진흥정책
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 전임 2 -->
+                <a class="faculty-card" href="faculty/faculty_professors/jeon-gwangho.html">
+                    <div class="card-photo">
+                        <img src="people_image/전광호.png" alt="전광호">
+                    </div>
+                    <div class="card-body">
+                        <div class="position">Professor</div>
+                        <div class="name">전광호</div>
+                        <div class="name-en">Gwangho Jeon</div>
+                        <div class="research">
+                            <strong>Research</strong>
+                            군사전략
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 전임 3 -->
+                <a class="faculty-card" href="faculty/faculty_professors/jang-wonjun.html">
+                    <div class="card-photo">
+                        <img src="people_image/장원준.jpg" alt="장원준">
+                    </div>
+                    <div class="card-body">
+                        <div class="position">Associate Professor</div>
+                        <div class="name">장원준</div>
+                        <div class="name-en">Wonjun Jang</div>
+                        <div class="research">
+                            <strong>Research</strong>
+                            방위산업
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 전임 4 -->
+                <a class="faculty-card" href="faculty/faculty_professors/hong-seongmin.html">
+                    <div class="card-photo">
+                        <img src="people_image/홍성민.png" alt="홍성민">
+                    </div>
+                    <div class="card-body">
+                        <div class="position">Associate Professor</div>
+                        <div class="name">홍성민</div>
+                        <div class="name-en">Seongmin Hong</div>
+                        <div class="research">
+                            <strong>Research</strong>
+                            재료공학, 방산소재, 고온재료
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 전임 5 -->
+                <a class="faculty-card" href="faculty/faculty_professors/song-moonwon.html">
+                    <div class="card-photo">
+                        <img src="people_image/송문원.jpg" alt="송문원">
+                    </div>
+                    <div class="card-body">
+                        <div class="position">Assistant Professor</div>
+                        <div class="name">송문원</div>
+                        <div class="name-en">Moonwon Song</div>
+                        <div class="research">
+                            <strong>Research</strong>
+                            고엔탈피 열유동 시험 및 해석
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 전임 6 -->
+                <a class="faculty-card" href="faculty/faculty_professors/yoo-joonsoo.html">
+                    <div class="card-photo">
+                        <img src="people_image/유준수.jpg" alt="유준수">
+                    </div>
+                    <div class="card-body">
+                        <div class="position">Assistant Professor</div>
+                        <div class="name">유준수</div>
+                        <div class="name-en">Joonsoo Yoo</div>
+                        <div class="research">
+                            <strong>Research</strong>
+                            사이버보안, 양자내성암호, 인공지능보안
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 전임 7 -->
+                <a class="faculty-card" href="faculty/faculty_professors/lee-daegyu.html">
+                    <div class="card-photo">
+                        <img src="people_image/이대규.jpg" alt="이대규">
+                    </div>
+                    <div class="card-body">
+                        <div class="position">Assistant Professor</div>
+                        <div class="name">이대규</div>
+                        <div class="name-en">Daegyu Lee</div>
+                        <div class="research">
+                            <strong>Research</strong>
+                            무인시스템, 자율주행, 자율비행
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================
+         특임교원 (2명)
+    ============================== -->
+    <section class="faculty-section">
+        <div class="container">
+            <div class="section-heading">
+
+                <h3>특임교원</h3>
+                <span class="count">총 2명</span>
+            </div>
+            <div class="faculty-grid col-4">
+
+                <!-- 특임 1 -->
+                <a class="faculty-card" href="faculty/faculty_professors/won-incheol.html">
+                    <div class="card-photo">
+                        <img src="people_image/원인철.jpg" alt="원인철">
+                    </div>
+                    <div class="card-body">
+                        <div class="position">Special Professor</div>
+                        <div class="name">원인철</div>
+                        <div class="name-en">Incheol Won</div>
+                        <div class="research">
+                            <strong>Research</strong>
+                            --
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 특임 2 -->
+                <a class="faculty-card" href="faculty/faculty_professors/lee-byeongkwon.html">
+                    <div class="card-photo">
+                        <img src="people_image/이병권.jpg" alt="이병권">
+                    </div>
+                    <div class="card-body">
+                        <div class="position">Special Professor</div>
+                        <div class="name">이병권</div>
+                        <div class="name-en">Byeongkwon Lee</div>
+                        <div class="research">
+                            <strong>Research</strong>
+                            국방연구개발, 국방과학기술
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================
+         객원교원 (3명)
+    ============================== -->
+    <section class="faculty-section">
+        <div class="container">
+            <div class="section-heading">
+
+                <h3>객원교원</h3>
+                <span class="count">총 3명</span>
+            </div>
+            <div class="faculty-grid col-4">
+
+                <!-- 객원 1 -->
+                <a class="faculty-card" href="faculty/faculty_professors/ahn-gyeongsu.html">
+                    <div class="card-photo">
+                        <img src="people_image/안경수.jpg" alt="안경수">
+                    </div>
+                    <div class="card-body">
+                        <div class="position">Visiting Professor</div>
+                        <div class="name">안경수</div>
+                        <div class="name-en">Gyeongsu Ahn</div>
+                        <div class="research">
+                            <strong>Research</strong>
+                            방위산업정책
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 객원 2 -->
+                <a class="faculty-card" href="faculty/faculty_professors/lee-bonggeun.html">
+                    <div class="card-photo">
+                        <img src="people_image/이봉근.png" alt="이봉근">
+                    </div>
+                    <div class="card-body">
+                        <div class="position">Visiting Professor</div>
+                        <div class="name">이봉근</div>
+                        <div class="name-en">Bonggeun Lee</div>
+                        <div class="research">
+                            <strong>Research</strong>
+                            방위산업 정책 및 수출, 시험평가 및 인증
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 객원 3 -->
+                <a class="faculty-card" href="faculty/faculty_professors/jeong-dongcheol.html">
+                    <div class="card-photo">
+                        <img src="people_image/정동철.png" alt="정동철">
+                    </div>
+                    <div class="card-body">
+                        <div class="position">Visiting Professor</div>
+                        <div class="name">정동철</div>
+                        <div class="name-en">Dongcheol Jeong</div>
+                        <div class="research">
+                            <strong>Research</strong>
+                            경량 복합 장갑재료, 전자파 흡수
+                            복합 장갑재료
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
 </main>
 
 <footer class="site-footer">
